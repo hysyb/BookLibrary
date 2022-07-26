@@ -9,5 +9,22 @@
 </head>
 <body>
     <h1>Book Library</h1>
+    <button class = 'addBookBtn'>+ Add a Book</button>
+    <div class = 'addBookModal'>
+        <div class = 'addBookModal-content'>
+            <form class = 'addBookModal-form'>
+                <h1 class = 'addBookModal-header'>Enter Book Details:</h1>
+                <label for="author">Author:</label><br>
+                <input type = 'text' id = 'author' name = 'author' placeholder="Author"><br>
+                <label for="title">Title:</label><br>
+                <input type="text" id = 'title' name = 'title' placeholder="Title"><br>
+                <label for="pages">Number of Pages:</label><br>
+                <input type="number" name="pages" id="pages">
+
+            </form>
+        </div>
+    </div>
+    <div class = 'bookGrid'></div>
+
 </body>
 </html>
