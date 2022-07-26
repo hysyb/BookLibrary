@@ -1,7 +1,17 @@
-const addBookBtn = document.querySelector('.addBookBtn')
-const addBookModal = document.querySelector('.addBookModal')
+
+
+const addBookBtn = document.querySelector('.addBookBtn');
+const addBookModal = document.querySelector('.addBookModal');
+const modalSubmit = document.querySelector('.addBookModal-submit');
+
+
+
 
 function openModal(){
-    addBookModal.classList.add('active')
+    addBookModal.classList.add('active');
 }
-addBookBtn.addEventListener('click', openModal)
+function closeModal(){
+    addBookModal.classList.remove('active');
+}
+addBookBtn.addEventListener('click', openModal);
+modalSubmit.addEventListener('click', closeModal);
