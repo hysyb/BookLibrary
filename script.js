@@ -29,7 +29,7 @@ function addToGrid(){
     let newBookAuthor = document.createElement('p');
     let newBookPages = document.createElement('p');*/
     newBookCard.classList.add('bookCard');
-    newBookCard.innerHTML =  '<p>Title = '+newBook.title+' </p><p>Author ='+newBook.Author+'</p><p>Pages = '+newBook.Pages+'</p><button class = "removeBtn"> Remove</button>';
+    newBookCard.innerHTML =  '<p>Title = '+newBook.title+' </p><p>Author ='+newBook.author+'</p><p>Pages = '+newBook.pages+'</p><button class = "removeBtn"> Remove</button>';
    /* newBookTitle.innerText = "Title = " + newBook.title;
     newBookAuthor.innerText = "Author = " + newBook.author;
     newBookPages.innerText = "Pages = " + newBook.pages;
