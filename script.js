@@ -25,18 +25,8 @@ function closeModal(){
 function addToGrid(){
     let newBook = new Book(addBookModalForm.author.value, addBookModalForm.title.value, addBookModalForm.pages.value);
     let newBookCard = document.createElement('div');
-  /*  let newBookTitle = document.createElement('p');
-    let newBookAuthor = document.createElement('p');
-    let newBookPages = document.createElement('p');*/
     newBookCard.classList.add('bookCard');
     newBookCard.innerHTML =  '<p>Title = '+newBook.title+' </p><p>Author ='+newBook.author+'</p><p>Pages = '+newBook.pages+'</p><button class = "removeBtn"> Remove</button>';
-   /* newBookTitle.innerText = "Title = " + newBook.title;
-    newBookAuthor.innerText = "Author = " + newBook.author;
-    newBookPages.innerText = "Pages = " + newBook.pages;
-    //newBookCard.innerText = "Title = " + newBook.title + "Author = " + newBook.author + "Pages = " + newBook.pages;
-    newBookCard.appendChild(newBookTitle);
-    newBookCard.appendChild(newBookAuthor);
-    newBookCard.appendChild(newBookPages);*/
     bookGrid.appendChild(newBookCard);
     let removeBtns = document.querySelectorAll('.removeBtn');
     for (i=0;i<removeBtns.length;i++){
