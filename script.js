@@ -29,7 +29,7 @@ function addToGrid(){
     let newBookAuthor = document.createElement('p');
     let newBookPages = document.createElement('p');*/
     newBookCard.classList.add('bookCard');
-    newBookCard.innerHTML =  '<p>Title = '+newBook.title+' </p><p>Author ='+newBook.Author+'</p><p>Pages = '+newBook.Pages+'</p>';
+    newBookCard.innerHTML =  '<p>Title = '+newBook.title+' </p><p>Author ='+newBook.Author+'</p><p>Pages = '+newBook.Pages+'</p><button class = "removeBtn"> Remove</button>';
    /* newBookTitle.innerText = "Title = " + newBook.title;
     newBookAuthor.innerText = "Author = " + newBook.author;
     newBookPages.innerText = "Pages = " + newBook.pages;
@@ -38,8 +38,16 @@ function addToGrid(){
     newBookCard.appendChild(newBookAuthor);
     newBookCard.appendChild(newBookPages);*/
     bookGrid.appendChild(newBookCard);
-
+    let removeBtns = document.querySelectorAll('.removeBtn');
+    for (i=0;i<removeBtns.length;i++){
+        removeBtns[i].addEventListener('click',removeFromGrid);
+    }
 }
+
+function removeFromGrid(){
+    bookGrid.removeChild(this.parentNode);
+}
+
 addBookBtn.addEventListener('click', openModal);
-addBookModalForm.addEventListener('submit',closeModal)
+addBookModalForm.addEventListener('submit',closeModal);
 modalSubmit.addEventListener('click', closeModal);
