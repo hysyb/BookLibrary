@@ -18,9 +18,10 @@ class Book {
 function openModal(){
     addBookModal.classList.add('active');
 }
-function closeModal(){
+function closeModal(e){
     addToGrid();
     addBookModal.classList.remove('active');
+    e.preventDefault();
 }
 function addToGrid(){
     let newBook = new Book(addBookModalForm.author.value, addBookModalForm.title.value, addBookModalForm.pages.value);
@@ -40,4 +41,4 @@ function removeFromGrid(){
 
 addBookBtn.addEventListener('click', openModal);
 addBookModalForm.addEventListener('submit',closeModal);
-modalSubmit.addEventListener('click', closeModal);
+modalSubmit.addEventListener('submit', closeModal);
